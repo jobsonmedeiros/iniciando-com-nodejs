@@ -1,0 +1,24 @@
+{
+  "name": "iniciando-com-nodejs",
+  "version": "0.0.1",
+  "description": "Primeiro APP com NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobsonmedeiros/iniciando-com-nodejs.git"
+  },
+  "keywords": [
+    "Node",
+    "API",
+    "Routes"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobsonmedeiros/iniciando-com-nodejs/issues"
+  },
+  "homepage": "https://github.com/jobsonmedeiros/iniciando-com-nodejs#readme"
+}
