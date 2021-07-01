@@ -1,7 +1,7 @@
 {
   "name": "iniciando-com-nodejs",
   "version": "0.0.1",
-  "description": "Primeiro APP com NodeJs",
+  "description": "Primeira API com NodeJs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,7 @@
     "API",
     "Routes"
   ],
-  "author": "",
+  "author": "Jobson Medeiros",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jobsonmedeiros/iniciando-com-nodejs/issues"

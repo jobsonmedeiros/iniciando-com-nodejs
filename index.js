@@ -1,7 +1,8 @@
-const express = require("express")
-const app = express()
-const port = 3000
+const express = require("express") // instala o framework express
+const app = express() // express como função
+const port = 3000 // vai rodar em http://localhost:3000
 
-listen("/", () => {
-    console.log("Node rodando na porta 3000...")
+app.listen(port, (req, res) => {
+    console.log("Node rodando na porta " + port + "...")
 })
+
