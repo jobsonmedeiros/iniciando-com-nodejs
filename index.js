@@ -1,9 +1,13 @@
 const express = require('express') // instala o framework express
+const bodyParser = require('body-parser')
 // Usando a modularização do node vamos importar o routes
 const userRoute = require("./routes/userRoute.js")
 
 const app = express() // express como função
+
 const port = 3000 // vai rodar em http://localhost:3000
+
+app.use(bodyParser.urlencoded({extended: false})) // faz a transformação dos dados do post em obj 
 
 // vamos usar a função userRoute passando como dependência nosso app
 // userRoute(app) // vamos usar o postman pra testes

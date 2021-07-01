@@ -33,6 +33,25 @@ const userRoute = (app) => {
         const users = getUsers() // usa a função pra ler e
         res.send({users}) // envia resposta com os usuários
     })
+    .post((req, res) => {
+        const users = getUsers() // criando o método post
+        // inserimos novo registro no objeto usando o body(corpo da requisição, dos campos
+        // que enviamos no formulário)
+        // Ficará disponível o nome do campo e seu valor
+        users.push(req.body) //como users é um array podemos usar o push
+
+        // usa o objeto atualizado e salva no arquivo json
+        saveUser(users)
+
+        // Damos uma resposta positiva informando criação do usuário
+        res.send(201).send("OK")
+
+/*
+  Para poder transformar os dados que recebemos do cabeçalho da requisição http em um objeto
+  precisamos instalar um middleware pro express (bodyParser)
+*/
+
+    })
 }
 
 module.exports = userRoute // exportando o módulo para usar externamente
