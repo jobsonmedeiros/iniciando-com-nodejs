@@ -70,6 +70,13 @@ const userRoute = (app) => {
         // retornamos o status 200 com texto "OK"
         res.status(200).send("OK")
     })
+    .delete((req, res) => { // método para apagar um usuário
+        const users = getUsers() // buscamos os usuários
+        // vamos filtrar usuários diferentes do id passado na url
+        saveUser(users.filter(user => user.id !== req.params.id))
+
+        res.status(200).send("OK")
+    })
 }
 
 module.exports = userRoute // exportando o módulo para usar externamente

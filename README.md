@@ -1,7 +1,9 @@
 # iniciando-com-nodejs
 - Instalação e configuração do ambiente
 ## Criação de uma API simples com o framework Express
-- CRUD com Node.JS
+
+CRUD com Node.JS
+
 Requisitos:
 - Conhecer JS e fundamentos;
 - Conhecer comandos básicos de terminal
