@@ -4,7 +4,7 @@
 
 CRUD com Node.JS
 
-Requisitos:
+Requisitos desejáveis:
 - Conhecer JS e fundamentos;
 - Conhecer comandos básicos de terminal
 - Entender os métodos GET/POST/PUT e DELETE
