@@ -44,13 +44,31 @@ const userRoute = (app) => {
         saveUser(users)
 
         // Damos uma resposta positiva informando criação do usuário
-        res.send(201).send("OK")
+        res.status(201).send("OK")
 
 /*
   Para poder transformar os dados que recebemos do cabeçalho da requisição http em um objeto
   precisamos instalar um middleware pro express (bodyParser)
 */
 
+    })
+    // agora criaremos a rota para atualizar os usuários
+    .put((req, res) => {
+        const users = getUsers() // buscamos os usuários
+        // usaremos map pra atualizarmos o usuário q informarmos o id
+        saveUser(users.map(user => { 
+            // se o userid atual for igual ao passado como parâmetro na req
+            if(user.id === req.params.id){
+                // retorna um objeto com user atual mesclando com dados do body
+                // que foram passados para atualizá-lo
+                return {...user, ...req.body}
+            }
+
+            // senão retornamos o usuário sem nenhuma modificação
+            return user
+        }))
+        // retornamos o status 200 com texto "OK"
+        res.status(200).send("OK")
     })
 }
 
